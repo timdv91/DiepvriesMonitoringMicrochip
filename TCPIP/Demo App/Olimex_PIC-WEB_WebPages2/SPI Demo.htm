@@ -1,0 +1,66 @@
+~inc:header.inc~
+
+<div id="content">
+	<h1>SPI Demo</h1>
+
+	<p>
+	This is a sample demo for Olimex PIC-WEB rev.C board for communication between the PIC-WEB and a slave board via SPI interface (tested with MOD-TC).
+	</p>
+	<p>
+	If you are writing to the slave you should input the data. Otherwise if you read from the slave the data will be displayed below and you have to input the number of bytes in the field "Input".
+	</p>
+	<p>
+	By default the maximum of received bytes is 4. If you want to increase it edit the value of the macro <i>OUTPUT_RECEIVE_MAX_BYTES</i> inside the <b>CustomHTTPApp.c</b> file.
+	</p>
+	
+	<form method="get" action="SPI Demo.htm">
+	<div class="spi-demo">
+		<fieldset>
+			<div><label>Input:</label> <input type="text" name="Input" maxlength="16"/></div>
+			<input type="submit" name="Write" value="Write"><br />
+			<input type="submit" name="Read" value="Read"><br />
+		</fieldset>
+	</div>
+
+	</form>
+	
+	<div id="status">
+		<div id="loading" style="display:none">Error:<br />Connection to demo board was lost.</div>
+		<div id="display">
+			<p>SPI Result= <span id="SPIRes" style="font-weight:normal">?</span></p>
+		</div>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+<!--
+// Parses the xmlResponse from status.xml and updates the status box
+function updateStatus(xmlData) {
+	// Check if a timeout occurred
+	if(!xmlData)
+	{
+		document.getElementById('display').style.display = 'none';
+		document.getElementById('loading').style.display = 'inline';
+		return;
+	}
+
+	// Make sure we're displaying the status display
+	document.getElementById('loading').style.display = 'none';
+	document.getElementById('display').style.display = 'inline';
+
+
+	// Update SPIRes value
+	document.getElementById('SPIRes').innerHTML = getXMLValue(xmlData, 'SPIRes');
+}
+setTimeout("newAJAXCommand('status.xml', updateStatus, true)",500);
+//-->
+</script>
+
+<script type="text/javascript">
+<!--
+document.getElementById('hello').innerHTML = "~hellomsg~";
+//-->
+</script>
+
+~inc:footer.inc~

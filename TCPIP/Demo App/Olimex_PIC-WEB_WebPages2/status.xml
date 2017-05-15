@@ -1,0 +1,9 @@
+<response>
+<led1>~led(1)~</led1>
+<btn0>~btn(0)~</btn0>
+<temp0>~temp~</temp0>
+<pot0>~pot~</pot0>
+<UART_Output>~UART_Output~</UART_Output>
+<I2CRes>~I2CRes~</I2CRes>
+<SPIRes>~SPIRes~</SPIRes>
+</response>

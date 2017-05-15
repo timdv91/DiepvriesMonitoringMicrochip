@@ -1,0 +1,75 @@
+~inc:header.inc~
+
+<div id="content">
+	<h1>I2C Demo</h1>
+
+	<form method="get" action="I2C Demo.htm">
+	<p>
+	This is a sample demo for Olimex PIC-WEB rev.C board for communication between the PIC-WEB and a slave board via I2C interface (tested with MOD-IO and MOD-IO2).
+	</p>
+	<p><b>Note:</b>
+		Since the different slave boards work with different I2C frequency, below you can set the delay between software I2C clock toggles. The input represents the number of cycles multiplied by 10. A single cycle is approximately 160ns. Default value is 30, which means the delay is: 30*10*160ns = 48000ns = 48us.<br/>
+		<label>I2C Delay:</label> <input type="text" name="I2C_Delay" maxlength="8"/>
+		<input type="submit" name="Save" value="Save" style="margin-top:3px;">
+	</p>
+	<p>
+	In order to work you have to add the address of the slave, code of the command and if you are writing to the slave - you should input the data; otherwise (if you read from the slave) the data will be displayed below and you have to input the number of bytes in the field "Input".
+	</p>
+	<p>
+		By default the maximum of received bytes is 4. If you want to increase it edit the value of the macro <i>OUTPUT_RECEIVE_MAX_BYTES</i> inside the <b>CustomHTTPApp.c</b> file.<br/>
+	</p>
+	
+
+
+	<div class="i2c-demo">
+		<fieldset>
+			<div><label>Address:</label> <input type="text" name="Address" maxlength="16"/></div>
+			<div><label>Command:</label> <input type="text" name="Command" maxlength="16"/></div>
+			<div><label>Input:</label> <input type="text" name="Input" maxlength="16"/></div>
+			<input type="submit" name="Write" value="Write"><br/>
+			<input type="submit" name="Read" value="Read"><br/>
+		</fieldset>
+	</div>
+
+	<div id="status">
+		<div id="loading" style="display:none">Error:<br />Connection to demo board was lost.</div>
+		<div id="display">
+			<p>I2C Result= <span id="I2CRes" style="font-weight:normal">?</span></p>
+		</div>
+	</div>
+	</form>
+
+</div>
+
+<script type="text/javascript">
+<!--
+// Parses the xmlResponse from status.xml and updates the status box
+function updateStatus(xmlData) {
+	// Check if a timeout occurred
+	if(!xmlData)
+	{
+		document.getElementById('display').style.display = 'none';
+		document.getElementById('loading').style.display = 'inline';
+		return;
+	}
+
+	// Make sure we're displaying the status display
+	document.getElementById('loading').style.display = 'none';
+	document.getElementById('display').style.display = 'inline';
+	
+
+	// Update I2CRes value
+	document.getElementById('I2CRes').innerHTML = getXMLValue(xmlData, 'I2CRes');	
+
+}
+setTimeout("newAJAXCommand('status.xml', updateStatus, true)",500);
+//-->
+</script>
+
+<script type="text/javascript">
+<!--
+document.getElementById('hello').innerHTML = "~hellomsg~";
+//-->
+</script>
+
+~inc:footer.inc~

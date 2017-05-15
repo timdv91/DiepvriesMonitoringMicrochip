@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="62">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <logicalFolder name="Common" displayName="Common" projectFiles="true">
+        <itemPath>../../../Microchip/Include/Compiler.h</itemPath>
+        <itemPath>../../../Microchip/Include/GenericTypeDefs.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="Olimex Demo" displayName="Olimex Demo" projectFiles="true">
+        <itemPath>../Configs/TCPIP OLIMEX_PIC_WEB.h</itemPath>
+        <itemPath>../Configs/HWP OLIMEX_PIC_WEB.h</itemPath>
+        <itemPath>../Olimex_Demo_Files/Custom_I2C.h</itemPath>
+        <itemPath>../Olimex_Demo_Files/Custom_I2C_Low.h</itemPath>
+        <itemPath>../Olimex_Demo_Files/Custom_SPI.h</itemPath>
+        <itemPath>../Olimex_Demo_Files/Custom_SPI_Low.h</itemPath>
+        <itemPath>../Olimex_Demo_Files/Custom_UART.h</itemPath>
+        <itemPath>../Olimex_Demo_Files/Custom_UART_Low.h</itemPath>
+        <itemPath>../Olimex_Demo_Files/Misc_Functions.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="TCPIP Stack" displayName="TCPIP Stack" projectFiles="true">
+        <itemPath>../../../Microchip/Include/TCPIP Stack/Announce.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/ARP.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/AutoIP.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/BerkeleyAPI.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/Delay.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/DHCP.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/DNS.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/DynDNS.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/ENC28J60.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/ENCX24J600.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/ETH97J60.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/FTP.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/Hashes.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/Helpers.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/HTTP2.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/ICMP.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/IP.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/LCDBlocking.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/MAC.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/MPFS2.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/NBNS.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/Reboot.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/SMTP.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/SNMP.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/SNTP.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/SPIFlash.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/SPIRAM.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/StackTsk.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/TCP.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/TCPIP.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/TCPPerformanceTest.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/Telnet.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/TFTPc.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/Tick.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/UART2TCPBridge.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/UART.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/UDP.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/UDPPerformanceTest.h</itemPath>
+        <itemPath>../../../Microchip/Include/TCPIP Stack/XEEPROM.h</itemPath>
+        <itemPath>../HardwareProfile.h</itemPath>
+        <itemPath>../mib.h</itemPath>
+        <itemPath>../TCPIPConfig.h</itemPath>
+        <itemPath>../HTTPPrint.h</itemPath>
+      </logicalFolder>
+      <itemPath>../MainDemo.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LinkerScript"
+                   displayName="Linker Files"
+                   projectFiles="true">
+      <itemPath>../18f67j60.lkr</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="Examples" displayName="Examples" projectFiles="true">
+        <itemPath>../BerkeleyTCPClientDemo.c</itemPath>
+        <itemPath>../BerkeleyTCPServerDemo.c</itemPath>
+        <itemPath>../BerkeleyUDPClientDemo.c</itemPath>
+        <itemPath>../GenericTCPClient.c</itemPath>
+        <itemPath>../GenericTCPServer.c</itemPath>
+        <itemPath>../PingDemo.c</itemPath>
+        <itemPath>../SMTPDemo.c</itemPath>
+        <itemPath>../UARTConfig.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="Olimex Demo" displayName="Olimex Demo" projectFiles="true">
+        <itemPath>../Olimex_Demo_Files/Custom_I2C.c</itemPath>
+        <itemPath>../Olimex_Demo_Files/Custom_I2C_Low.c</itemPath>
+        <itemPath>../Olimex_Demo_Files/Custom_SPI.c</itemPath>
+        <itemPath>../Olimex_Demo_Files/Custom_SPI_Low.c</itemPath>
+        <itemPath>../Olimex_Demo_Files/Custom_UART.c</itemPath>
+        <itemPath>../Olimex_Demo_Files/Custom_UART_Low.c</itemPath>
+        <itemPath>../Olimex_Demo_Files/Misc_Functions.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="TCPIP Stack" displayName="TCPIP Stack" projectFiles="true">
+        <itemPath>../../../Microchip/TCPIP Stack/Announce.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/ARP.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/AutoIP.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/BerkeleyAPI.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/Delay.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/DHCP.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/DHCPs.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/DNS.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/DNSs.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/DynDNS.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/ENC28J60.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/ENCX24J600.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/ETH97J60.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/FTP.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/Hashes.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/Helpers.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/HTTP2.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/ICMP.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/IP.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/LCDBlocking.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/MPFS2.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/NBNS.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/Reboot.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/SMTP.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/SNMP.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/SNTP.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/SPIEEPROM.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/SPIFlash.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/SPIRAM.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/StackTsk.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/TCP.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/TCPPerformanceTest.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/Telnet.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/TFTPc.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/Tick.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/UART2TCPBridge.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/UART.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/UDP.c</itemPath>
+        <itemPath>../../../Microchip/TCPIP Stack/UDPPerformanceTest.c</itemPath>
+      </logicalFolder>
+      <itemPath>../CustomHTTPApp.c</itemPath>
+      <itemPath>../CustomSNMPApp.c</itemPath>
+      <itemPath>../MainDemo.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+    <logicalFolder name="OtherFiles" displayName="Other Files" projectFiles="false">
+      <itemPath>../../../Microchip/TCPIP Stack/TCPIP Stack Version.txt</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>..</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="default" type="2">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <targetDevice>PIC18F67J60</targetDevice>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
+        <platformTool>PICkit3PlatformTool</platformTool>
+        <languageToolchain>C18</languageToolchain>
+        <languageToolchainVersion>3.47</languageToolchainVersion>
+        <platform>3</platform>
+      </toolsSet>
+      <compileType>
+        <linkerTool>
+          <linkerLibItems>
+          </linkerLibItems>
+        </linkerTool>
+        <archiverTool>
+        </archiverTool>
+        <loading>
+          <useAlternateLoadableFile>false</useAlternateLoadableFile>
+          <parseOnProdLoad>false</parseOnProdLoad>
+          <alternateLoadableFile></alternateLoadableFile>
+        </loading>
+        <subordinates>
+        </subordinates>
+      </compileType>
+      <makeCustomizationType>
+        <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeCustomizationPreStep>..\Microchip\TCPIP Stack\Utilities\Timer -s</makeCustomizationPreStep>
+        <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
+        <makeCustomizationPostStep>..\Microchip\TCPIP Stack\Utilities\Timer -d</makeCustomizationPostStep>
+        <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
+        <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
+        <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
+      </makeCustomizationType>
+      <C18>
+        <property key="code-model" value="ml"/>
+        <property key="data-model" value="oa-"/>
+        <property key="default-char-unsigned" value="true"/>
+        <property key="enable-all-optimizations" value="true"/>
+        <property key="enable-int-promotion" value="false"/>
+        <property key="enable-multi-bank-stack-model" value="false"/>
+        <property key="enable-ob" value="true"/>
+        <property key="enable-od" value="true"/>
+        <property key="enable-om" value="true"/>
+        <property key="enable-on" value="true"/>
+        <property key="enable-op" value="true"/>
+        <property key="enable-opa" value="true"/>
+        <property key="enable-or" value="true"/>
+        <property key="enable-os" value="true"/>
+        <property key="enable-ot" value="true"/>
+        <property key="enable-ou" value="true"/>
+        <property key="enable-ow" value="true"/>
+        <property key="extra-include-directories"
+                  value="../Olimex_Demo_Files;..;../../Microchip/Include;../../../Microchip/Include;../../../Microchip/Include/TCPIP Stack;../Configs;."/>
+        <property key="optimization-master" value="Custom"/>
+        <property key="preprocessor-macros" value="BOARD_OLIMEX_PIC_WEB"/>
+        <property key="procedural-abstraction-passes" value="4"/>
+        <property key="storage-class" value="sco"/>
+        <property key="verbose" value="false"/>
+        <property key="warning-level" value="3"/>
+      </C18>
+      <C18-AS>
+        <property key="cross.reference.file" value=""/>
+        <property key="default.radix" value="HEX"/>
+        <property key="enable.case.sensitivity" value="true"/>
+        <property key="hex.output.format" value="INHX32"/>
+        <property key="preprocessor.macros" value="CFG_INCLUDE_PICDN2_ETH97"/>
+        <property key="warning.level" value="0"/>
+      </C18-AS>
+      <C18-LD>
+        <property key="cod-file" value="true"/>
+        <property key="extra-lib-directories" value="..;."/>
+        <property key="hex-output-format" value="INHX32"/>
+        <property key="map-file" value="&quot;$(BINDIR_)$(TARGETBASE).map&quot;"/>
+      </C18-LD>
+      <C18LanguageToolchain>
+        <property key="extended-mode" value="false"/>
+        <property key="extended-mode-mcc18" value="false"/>
+        <property key="extended-mode-mpasm" value="false"/>
+        <property key="extended-mode-mplink" value="false"/>
+        <property key="stack-analysis" value="false"/>
+        <property key="stack-analysis-mcc18" value="false"/>
+        <property key="stack-analysis-mplink" value="false"/>
+      </C18LanguageToolchain>
+      <PICkit3PlatformTool>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="Freeze Peripherals" value="true"/>
+        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
+        <property key="hwtoolclock.frcindebug" value="false"/>
+        <property key="memories.aux" value="false"/>
+        <property key="memories.bootflash" value="true"/>
+        <property key="memories.configurationmemory" value="true"/>
+        <property key="memories.configurationmemory2" value="true"/>
+        <property key="memories.dataflash" value="true"/>
+        <property key="memories.eeprom" value="true"/>
+        <property key="memories.flashdata" value="true"/>
+        <property key="memories.id" value="true"/>
+        <property key="memories.instruction.ram" value="true"/>
+        <property key="memories.instruction.ram.ranges"
+                  value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="memories.programmemory.ranges" value="0-1fff7"/>
+        <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmertogo.imagename" value=""/>
+        <property key="programoptions.donoteraseauxmem" value="false"/>
+        <property key="programoptions.eraseb4program" value="true"/>
+        <property key="programoptions.pgmspeed" value="2"/>
+        <property key="programoptions.preservedataflash" value="false"/>
+        <property key="programoptions.preservedataflash.ranges"
+                  value="${programoptions.preservedataflash.ranges}"/>
+        <property key="programoptions.preserveeeprom" value="false"/>
+        <property key="programoptions.preserveeeprom.ranges" value=""/>
+        <property key="programoptions.preserveprogram.ranges" value=""/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.preserveuserid" value="false"/>
+        <property key="programoptions.programcalmem" value="false"/>
+        <property key="programoptions.programuserotp" value="false"/>
+        <property key="programoptions.testmodeentrymethod" value="VPPFirst"/>
+        <property key="programoptions.usehighvoltageonmclr" value="false"/>
+        <property key="programoptions.uselvpprogramming" value="false"/>
+        <property key="voltagevalue" value="3.25"/>
+      </PICkit3PlatformTool>
+    </conf>
+  </confs>
+</configurationDescriptor>

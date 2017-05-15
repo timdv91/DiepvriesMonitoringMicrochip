@@ -1,0 +1,71 @@
+~inc:header.inc~
+
+<div id="content">
+	<h1>UART Demo</h1>
+	
+	<p>
+	This is a sample demo for Olimex PIC-WEB rev.C board for communication between the PIC-WEB and a slave board via UART interface (tested with MOD-LCD 4.3"+ revA). PIC-WEB UART default configuration is: 19200/8 data bits/1 stop bit/no parity.
+	</p>
+
+
+	<form method="get" action="UART Demo.htm">
+	<p>
+		If you need to change to another baudrate input the value in the field below and press Save button. You have to reload the page after that.<br />
+		<label>BaudRate:</label> <input type="text" name="BaudRate" maxlength="8"/>
+		<input type="submit" name="Save" value="Save" style="margin-top:3px;">
+	</p>
+	
+		<div class="examplebox">
+			<p>
+				You can send commands to the slave by input the text message in the field below and press the "Send" button. If \n\r is required to trigger the command of the slave then put a new line in the field. 
+			</p>
+			<br />
+			<div>
+				<label>Input Command:</label> <br /> <textarea name="Command" rows="2">Input command.</textarea>
+			</div>
+			<input type="submit" name="Send" value="Send" style="margin-top:3px;">
+		</div>
+	</form>
+	
+	<p>Output:</p>
+	<div id="uart-status">
+		<div id="display">
+			<span id="UART_Output"></span>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+<!--
+// Parses the xmlResponse from status.xml and updates the status box
+function updateStatus(xmlData) {
+	// Check if a timeout occurred
+	if(!xmlData)
+	{
+		document.getElementById('display').style.display = 'none';
+		return;
+	}
+
+	// Make sure we're displaying the status display
+	document.getElementById('display').style.display = 'inline';
+	
+
+	// Update UART_Output value
+	var uart = getXMLValue(xmlData, 'UART_Output');
+	if (uart) {
+		document.getElementById('UART_Output').innerHTML += uart;
+	}
+
+}
+setTimeout("newAJAXCommand('status.xml', updateStatus, true)",500);
+//-->
+</script>
+
+<script type="text/javascript">
+<!--
+document.getElementById('hello').innerHTML = "~hellomsg~";
+//-->
+</script>
+
+~inc:footer.inc~
