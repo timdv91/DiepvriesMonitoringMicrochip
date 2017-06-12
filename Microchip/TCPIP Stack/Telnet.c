@@ -149,6 +149,7 @@ void TelnetTask(void)
     int icounter =0;
     char tempStr[20];
     int value;
+    int TCerror;
     int isNegative;
     float tempTC;
     float tempIT;
@@ -325,6 +326,8 @@ void TelnetTask(void)
                 sprintf(tempStr, "%d.%d",(int)tempTC, (int)((tempTC-((int)tempTC))*100.0));
                 TCPPutString(MySocket, (BYTE*)tempStr);
                 */
+                
+                //check if temp is negative:
                 value = (spiData[3] >> 7) & 1;
                 if(value == 1)
                 {    
@@ -333,6 +336,17 @@ void TelnetTask(void)
                      spiData[3] = ~spiData[3]; 
                 }else{
                     isNegative = 0; //number is positive.
+                }
+                
+                //check for thermocouple errors:
+                value = (spiData[2] >> 0) & 1;
+                if(value == 1)
+                {
+                    //store errors inside value:
+                    value = (spiData[0] >> 0) & 1 * 1;
+                    value += (spiData[0] >> 1) & 1 * 2;
+                    value += (spiData[0] >> 2) & 1 * 3;
+                    TCerror = value;
                 }
                 /*
                 for(rcounter = 0; rcounter < 4; rcounter++)
@@ -363,12 +377,22 @@ void TelnetTask(void)
                 /*==========================*/
                 
                 if(isNegative == 1)
+                {    
                     value = -1;
+                    tempTC = tempTC + tempTC/5;
+                    tempTC = tempTC + fixTempOffsetUsingPotmeter();
+                }
                 else
                     value = 1;
                 
-                sprintf(tempStr, "%d.%d",(int)tempTC*value, (int)((tempTC-((int)tempTC))*100.0));
-                TCPPutString(MySocket, (BYTE*)tempStr);
+                if(TCerror <= 0)
+                {
+                    sprintf(tempStr, "%d.%d",(int)tempTC*value, (int)((tempTC-((int)tempTC))*100.0));
+                    TCPPutString(MySocket, (BYTE*)tempStr);
+                }else{
+                    sprintf(tempStr, "%d",(int)(TCerror+1000)*-1);
+                    TCPPutString(MySocket, (BYTE*)tempStr);
+                }
                 
                 TCPFlush(MySocket);
                 TelnetState = SM_GET_CMD;

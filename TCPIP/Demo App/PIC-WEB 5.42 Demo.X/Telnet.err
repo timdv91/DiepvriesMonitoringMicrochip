@@ -1,1 +1,4 @@
-Message[3004] C:\Users\Tim\Desktop\PIC-WEB-5-42-UEXT-full\Microchip\TCPIP Stack\Telnet.c 384 : comparison of a signed integer to an unsigned integer detected
+Warning[2060] C:\Users\Tim\Desktop\PIC-WEB-5-42-UEXT-full\Microchip\TCPIP Stack\Telnet.c 342 : shift expression has no effect
+Warning[2060] C:\Users\Tim\Desktop\PIC-WEB-5-42-UEXT-full\Microchip\TCPIP Stack\Telnet.c 346 : shift expression has no effect
+Warning[2058] C:\Users\Tim\Desktop\PIC-WEB-5-42-UEXT-full\Microchip\TCPIP Stack\Telnet.c 383 : call of function without prototype
+Message[3004] C:\Users\Tim\Desktop\PIC-WEB-5-42-UEXT-full\Microchip\TCPIP Stack\Telnet.c 408 : comparison of a signed integer to an unsigned integer detected
